@@ -1,23 +1,35 @@
-import {Component} from "@nestjs/common";
-
-@Component()
+import { Injectable} from "@nestjs/common";
+@Injectable()
 export class PacienteService {
-    constructor(paciente: PacienteClass) {
 
-    }
+    arregloPacientes: Paciente[] = [];
 
-    arregloPacientes: PacienteClass[] = [];
-
-    anadirPaciente(pacientes: PacienteClass): PacienteClass[] {
+    crearPaciente(pacientes: Paciente): Paciente[] {
         this.arregloPacientes.push(pacientes);
         return this.arregloPacientes;
     }
 
-    recuperarPacientes() {
+    listarTodos() {
         return this.arregloPacientes;
     }
 
-    buscarPaciente() {
-    }
+
+
+}
+
+export class Paciente {
+
+
+    constructor(
+        public nombre:string,
+        public apellido:string,
+        public fechaNacimeinto: string,
+        public hijos: number,
+        public tieneSeguro: boolean
+    ){
+
+
+
+}
 
 }

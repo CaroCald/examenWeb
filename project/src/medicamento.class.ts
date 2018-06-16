@@ -1,11 +1,11 @@
 class MedicamentoClass{
     constructor(
-        private gramosAlIngerir: number,
-        private nombre: string,
-        private composicion: string,
-        private usadoPara: string,
-        private fechaCaducidad: string,
-        private numeroPastillas: number,
-        private pacienteId: string
+        public gramosAlIngerir: number,
+        public nombre: string,
+        public composicion: string,
+        public usadoPara: string,
+        public fechaCaducidad: string,
+        public numeroPastillas: number,
+        public pacienteId: string
     ){};
 }
